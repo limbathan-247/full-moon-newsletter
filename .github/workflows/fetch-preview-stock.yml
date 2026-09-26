@@ -1,0 +1,35 @@
+name: Fetch preview stock
+on:
+  push:
+    branches: [preview-assets]
+    paths:
+      - '.github/workflows/fetch-preview-stock.yml'
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: preview-assets
+      - name: Download real stock photos
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p preview-stock
+          curl -L --fail --retry 3 'https://images.pexels.com/photos/7752683/pexels-photo-7752683.jpeg?cs=srgb&dl=pexels-arina-krasnikova-7752683.jpg&fm=jpg' -o preview-stock/hand-chest.jpg
+          curl -L --fail --retry 3 'https://images.pexels.com/photos/8279473/pexels-photo-8279473.jpeg?cs=srgb&dl=pexels-rdne-8279473.jpg&fm=jpg' -o preview-stock/journaling.jpg
+          curl -L --fail --retry 3 'https://unsplash.com/photos/I2oAwWaqnp4/download?force=true' -o preview-stock/light-shadow.jpg
+          file preview-stock/*
+          base64 -w 0 preview-stock/hand-chest.jpg > preview-stock/hand-chest.b64
+          base64 -w 0 preview-stock/journaling.jpg > preview-stock/journaling.b64
+          base64 -w 0 preview-stock/light-shadow.jpg > preview-stock/light-shadow.b64
+          rm preview-stock/*.jpg
+      - name: Commit encoded preview assets
+        run: |
+          git config user.name 'Preview Asset Bot'
+          git config user.email 'actions@github.com'
+          git add preview-stock/*.b64
+          git diff --cached --quiet || git commit -m 'Add temporary stock assets for desktop preview [skip ci]'
+          git push origin preview-assets

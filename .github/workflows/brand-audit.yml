@@ -1,0 +1,96 @@
+name: Brand Audit
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/brand-audit.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Inspect Tara Galeano website
+        run: |
+          python - <<'PY'
+          import re, urllib.request, urllib.parse, collections
+          from pathlib import Path
+
+          BASE='https://taragaleano.com/'
+          ua={'User-Agent':'Mozilla/5.0'}
+          def get(url):
+              req=urllib.request.Request(url,headers=ua)
+              with urllib.request.urlopen(req,timeout=30) as r:
+                  return r.read()
+
+          html=get(BASE).decode('utf-8','ignore')
+          Path('audit-home.html').write_text(html,encoding='utf-8')
+
+          css_urls=[]
+          for m in re.finditer(r'<link[^>]+href=[\"\']([^\"\']+\.css[^\"\']*)',html,re.I):
+              css_urls.append(urllib.parse.urljoin(BASE,m.group(1).replace('&amp;','&')))
+          css_urls=list(dict.fromkeys(css_urls))
+          css=[]
+          for u in css_urls:
+              try:
+                  css.append((u,get(u).decode('utf-8','ignore')))
+              except Exception:
+                  pass
+          allcss='\n'.join(t for _,t in css)
+          Path('audit-all.css').write_text(allcss,encoding='utf-8')
+
+          vars_found=[]
+          for name,val in re.findall(r'(--[A-Za-z0-9_-]*(?:color|typography)[A-Za-z0-9_-]*)\s*:\s*([^;}{]+)',allcss,re.I):
+              vars_found.append((name.strip(),val.strip()))
+
+          colors=[]
+          for c in re.findall(r'#[0-9a-fA-F]{3,8}\b',allcss):
+              c=c.upper()
+              if len(c)==4: c='#'+''.join(ch*2 for ch in c[1:])
+              if len(c) in (7,9): colors.append(c)
+          counts=collections.Counter(colors)
+
+          fonts=[]
+          for val in re.findall(r'font-family\s*:\s*([^;}{]+)',allcss,re.I):
+              val=re.sub(r'\s+',' ',val.strip())
+              fonts.append(val)
+          font_counts=collections.Counter(fonts)
+
+          img_urls=re.findall(r'(?:src|data-src)=[\"\']([^\"\']+)[\"\']',html,re.I)
+          img_urls=[urllib.parse.urljoin(BASE,u) for u in img_urls]
+          logo_candidates=[u for u in img_urls if 'logo' in u.lower()]
+          known='https://taragaleano.com/wp-content/uploads/2024/11/Tara-Galeano-Gold-Logo-3.png'
+          if known not in logo_candidates: logo_candidates.insert(0,known)
+          logo_url=None
+          for u in logo_candidates:
+              try:
+                  b=get(u)
+                  Path('tara-logo.png').write_bytes(b)
+                  logo_url=u
+                  break
+              except Exception:
+                  pass
+
+          out=[]
+          out.append('SOURCE: '+BASE)
+          out.append('\nSTYLESHEETS:')
+          out += css_urls
+          out.append('\nELEMENTOR / GLOBAL VARIABLES:')
+          out += [f'{k}: {v}' for k,v in vars_found[:200]]
+          out.append('\nTOP COLORS:')
+          out += [f'{c}  x{n}' for c,n in counts.most_common(80)]
+          out.append('\nTOP FONT-FAMILY DECLARATIONS:')
+          out += [f'{f}  x{n}' for f,n in font_counts.most_common(40)]
+          out.append('\nLOGO URL: '+str(logo_url))
+          Path('brand-audit.txt').write_text('\n'.join(out),encoding='utf-8')
+          PY
+      - name: Commit audit output
+        run: |
+          git config user.name "Brand Audit Bot"
+          git config user.email "actions@github.com"
+          git add brand-audit.txt audit-home.html audit-all.css tara-logo.png || true
+          git diff --cached --quiet || git commit -m "Add verified brand audit [skip ci]"
+          git push

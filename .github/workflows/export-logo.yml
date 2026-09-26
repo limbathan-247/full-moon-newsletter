@@ -1,0 +1,19 @@
+name: Export Logo Base64
+on:
+  push:
+    paths:
+      - '.github/workflows/export-logo.yml'
+permissions:
+  contents: write
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: base64 -w0 tara-logo.png > tara-logo.b64
+      - run: |
+          git config user.name "Asset Bot"
+          git config user.email "actions@github.com"
+          git add tara-logo.b64
+          git diff --cached --quiet || git commit -m "Export logo asset [skip ci]"
+          git push

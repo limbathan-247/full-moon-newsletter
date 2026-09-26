@@ -1,0 +1,340 @@
+SOURCE: https://taragaleano.com/
+
+STYLESHEETS:
+https://taragaleano.com/wp-content/plugins/blog-designer-pack/assets/css/font-awesome.min.css?ver=4.0.12
+https://taragaleano.com/wp-content/plugins/blog-designer-pack/assets/css/owl.carousel.min.css?ver=4.0.12
+https://taragaleano.com/wp-content/plugins/blog-designer-pack/assets/css/bdpp-public.min.css?ver=4.0.12
+https://taragaleano.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=6.1.7
+https://taragaleano.com/wp-content/plugins/the-events-calendar/build/css/tribe-events-single-skeleton.css?ver=6.17.4.1
+https://taragaleano.com/wp-content/plugins/the-events-calendar/build/css/tribe-events-single-full.css?ver=6.17.4.1
+https://taragaleano.com/wp-content/plugins/the-events-calendar/build/css/integrations/plugins/elementor/widgets/widget-base.css?ver=6.17.4.1
+https://taragaleano.com/wp-content/themes/hello-elementor/assets/css/reset.css?ver=3.4.5
+https://taragaleano.com/wp-content/themes/hello-elementor/assets/css/theme.css?ver=3.4.5
+https://taragaleano.com/wp-content/themes/hello-elementor/assets/css/header-footer.css?ver=3.4.5
+https://taragaleano.com/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=3.28.4
+https://taragaleano.com/wp-content/uploads/elementor/css/post-7.css?ver=1790090244
+https://taragaleano.com/wp-content/plugins/elementor/assets/css/widget-image.min.css?ver=3.28.4
+https://taragaleano.com/wp-content/plugins/elementor-pro/assets/css/widget-nav-menu.min.css?ver=3.28.4
+https://taragaleano.com/wp-content/plugins/elementor/assets/lib/animations/styles/e-animation-sink.min.css?ver=3.28.4
+https://taragaleano.com/wp-content/plugins/elementor/assets/lib/animations/styles/fadeInDown.min.css?ver=3.28.4
+https://taragaleano.com/wp-content/plugins/elementor/assets/css/widget-heading.min.css?ver=3.28.4
+https://taragaleano.com/wp-content/plugins/elementor/assets/css/widget-image-box.min.css?ver=3.28.4
+https://taragaleano.com/wp-content/plugins/elementor/assets/lib/animations/styles/fadeInUp.min.css?ver=3.28.4
+https://taragaleano.com/wp-content/plugins/elementor/assets/css/widget-divider.min.css?ver=3.28.4
+https://taragaleano.com/wp-content/plugins/elementor/assets/css/widget-spacer.min.css?ver=3.28.4
+https://taragaleano.com/wp-content/uploads/elementor/css/post-51.css?ver=1790090244
+https://taragaleano.com/wp-content/uploads/elementor/css/post-4141.css?ver=1790090244
+https://taragaleano.com/wp-content/uploads/elementor/css/post-5824.css?ver=1790090244
+https://taragaleano.com/wp-content/uploads/elementor/google-fonts/css/aboreto.css?ver=1742242758
+https://taragaleano.com/wp-content/uploads/elementor/google-fonts/css/raleway.css?ver=1778090745
+
+ELEMENTOR / GLOBAL VARIABLES:
+--tec-color-text-primary: #141827
+--tec-color-text-primary-light: #1418279e
+--tec-color-text-secondary: #5d5d5d
+--tec-color-text-disabled: #d5d5d5
+--tec-color-text-events-title: var(--tec-color-text-primary)
+--tec-color-text-event-title: var(--tec-color-text-events-title)
+--tec-color-text-event-date: var(--tec-color-text-primary)
+--tec-color-text-secondary-event-date: var(--tec-color-text-secondary)
+--tec-color-icon-primary: #5d5d5d
+--tec-color-icon-primary-alt: #757575
+--tec-color-icon-secondary: #bababa
+--tec-color-icon-active: #141827
+--tec-color-icon-disabled: #d5d5d5
+--tec-color-icon-focus: #334aff
+--tec-color-icon-error: #da394d
+--tec-color-event-icon: #141827
+--tec-color-event-icon-hover: #334aff
+--tec-color-accent-primary: #334aff
+--tec-color-accent-primary-hover: #334affcc
+--tec-color-accent-primary-active: #334affe6
+--tec-color-accent-primary-background: #334aff12
+--tec-color-accent-secondary: #141827
+--tec-color-accent-secondary-hover: #141827cc
+--tec-color-accent-secondary-active: #141827e6
+--tec-color-accent-secondary-background: #14182712
+--tec-color-button-primary: var(--tec-color-accent-primary)
+--tec-color-button-primary-hover: var(--tec-color-accent-primary-hover)
+--tec-color-button-primary-active: var(--tec-color-accent-primary-active)
+--tec-color-button-primary-background: var(--tec-color-accent-primary-background)
+--tec-color-button-secondary: var(--tec-color-accent-secondary)
+--tec-color-button-secondary-hover: var(--tec-color-accent-secondary-hover)
+--tec-color-button-secondary-active: var(--tec-color-accent-secondary-active)
+--tec-color-button-secondary-background: var(--tec-color-accent-secondary-background)
+--tec-color-link-primary: var(--tec-color-text-primary)
+--tec-color-link-accent: var(--tec-color-accent-primary)
+--tec-color-link-accent-hover: #334affcc
+--tec-color-border-default: #d5d5d5
+--tec-color-border-secondary: #e4e4e4
+--tec-color-border-tertiary: #7d7d7d
+--tec-color-border-hover: #5d5d5d
+--tec-color-border-active: #141827
+--tec-color-background: #fff
+--tec-color-background-events: #0000
+--tec-color-background-transparent: #fff9
+--tec-color-background-secondary: #f7f6f6
+--tec-color-background-messages: #14182712
+--tec-color-background-secondary-hover: #f0eeee
+--tec-color-background-error: #da394d14
+--tec-color-box-shadow: rgba(#000,0.14)
+--tec-color-box-shadow-secondary: rgba(#000,0.1)
+--tec-color-scroll-track: rgba(#000,0.25)
+--tec-color-scroll-bar: rgba(#000,0.5)
+--tec-color-background-primary-multiday: #334aff3d
+--tec-color-background-primary-multiday-hover: #334aff57
+--tec-color-background-secondary-multiday: #1418273d
+--tec-color-background-secondary-multiday-hover: #14182757
+--tec-color-accent-primary-week-event: #334aff1a
+--tec-color-accent-primary-week-event-hover: #334aff33
+--tec-color-accent-primary-week-event-featured: #334aff0a
+--tec-color-accent-primary-week-event-featured-hover: #334aff24
+--tec-color-background-secondary-datepicker: var(--tec-color-background-secondary)
+--tec-color-accent-primary-background-datepicker: var(--tec-color-accent-primary-background)
+--tec-color-text-primary: #141827
+--tec-color-text-primary-light: #1418279e
+--tec-color-text-secondary: #5d5d5d
+--tec-color-text-disabled: #d5d5d5
+--tec-color-text-events-title: var(--tec-color-text-primary)
+--tec-color-text-event-title: var(--tec-color-text-events-title)
+--tec-color-text-event-date: var(--tec-color-text-primary)
+--tec-color-text-secondary-event-date: var(--tec-color-text-secondary)
+--tec-color-icon-primary: #5d5d5d
+--tec-color-icon-primary-alt: #757575
+--tec-color-icon-secondary: #bababa
+--tec-color-icon-active: #141827
+--tec-color-icon-disabled: #d5d5d5
+--tec-color-icon-focus: #334aff
+--tec-color-icon-error: #da394d
+--tec-color-event-icon: #141827
+--tec-color-event-icon-hover: #334aff
+--tec-color-accent-primary: #334aff
+--tec-color-accent-primary-hover: #334affcc
+--tec-color-accent-primary-active: #334affe6
+--tec-color-accent-primary-background: #334aff12
+--tec-color-accent-secondary: #141827
+--tec-color-accent-secondary-hover: #141827cc
+--tec-color-accent-secondary-active: #141827e6
+--tec-color-accent-secondary-background: #14182712
+--tec-color-button-primary: var(--tec-color-accent-primary)
+--tec-color-button-primary-hover: var(--tec-color-accent-primary-hover)
+--tec-color-button-primary-active: var(--tec-color-accent-primary-active)
+--tec-color-button-primary-background: var(--tec-color-accent-primary-background)
+--tec-color-button-secondary: var(--tec-color-accent-secondary)
+--tec-color-button-secondary-hover: var(--tec-color-accent-secondary-hover)
+--tec-color-button-secondary-active: var(--tec-color-accent-secondary-active)
+--tec-color-button-secondary-background: var(--tec-color-accent-secondary-background)
+--tec-color-link-primary: var(--tec-color-text-primary)
+--tec-color-link-accent: var(--tec-color-accent-primary)
+--tec-color-link-accent-hover: #334affcc
+--tec-color-border-default: #d5d5d5
+--tec-color-border-secondary: #e4e4e4
+--tec-color-border-tertiary: #7d7d7d
+--tec-color-border-hover: #5d5d5d
+--tec-color-border-active: #141827
+--tec-color-background: #fff
+--tec-color-background-events: #0000
+--tec-color-background-transparent: #fff9
+--tec-color-background-secondary: #f7f6f6
+--tec-color-background-messages: #14182712
+--tec-color-background-secondary-hover: #f0eeee
+--tec-color-background-error: #da394d14
+--tec-color-box-shadow: rgba(#000,0.14)
+--tec-color-box-shadow-secondary: rgba(#000,0.1)
+--tec-color-scroll-track: rgba(#000,0.25)
+--tec-color-scroll-bar: rgba(#000,0.5)
+--tec-color-background-primary-multiday: #334aff3d
+--tec-color-background-primary-multiday-hover: #334aff57
+--tec-color-background-secondary-multiday: #1418273d
+--tec-color-background-secondary-multiday-hover: #14182757
+--tec-color-accent-primary-week-event: #334aff1a
+--tec-color-accent-primary-week-event-hover: #334aff33
+--tec-color-accent-primary-week-event-featured: #334aff0a
+--tec-color-accent-primary-week-event-featured-hover: #334aff24
+--tec-color-background-secondary-datepicker: var(--tec-color-background-secondary)
+--tec-color-accent-primary-background-datepicker: var(--tec-color-accent-primary-background)
+--tec-form-color-background: var(--tec-color-background)
+--tec-form-color-border-default: var(--tec-color-text-primary)
+--tec-form-color-border-active: var(--tec-color-accent-secondary)
+--tec-form-color-border-secondary: var(--tec-color-border-tertiary)
+--tec-form-color-accent-primary: var(--tec-color-accent-primary)
+--tec-outline-color-default: var(--tec-color-border-active,#1a202c)
+--tec-transition-background-color: background-color 0.2s ease
+--tec-transition-color-border-color: color 0.2s ease,border-color 0.2s ease
+--tec-transition-border-color: border-color 0.2s ease
+--tec-transition-color: color 0.2s ease
+--border-color: initial
+--e-global-color-primary: #282828
+--e-global-color-secondary: #CAB8A2
+--e-global-color-text: #282828
+--e-global-color-accent: #C49D29
+--e-global-color-9670681: #E8E1D8
+--e-global-color-9042db2: #F4F0EE
+--e-global-color-541fa18: #FFFFFF
+--e-global-color-c75ad52: #AF4B2F00
+--e-global-typography-primary-font-family: "Aboreto"
+--e-global-typography-primary-font-size: 48px
+--e-global-typography-primary-font-weight: 400
+--e-global-typography-primary-text-transform: none
+--e-global-typography-primary-font-style: normal
+--e-global-typography-primary-text-decoration: none
+--e-global-typography-primary-line-height: 1.2em
+--e-global-typography-primary-letter-spacing: -0.5px
+--e-global-typography-primary-word-spacing: 0px
+--e-global-typography-secondary-font-family: "Aboreto"
+--e-global-typography-secondary-font-size: 32px
+--e-global-typography-secondary-font-weight: 400
+--e-global-typography-secondary-text-transform: capitalize
+--e-global-typography-secondary-font-style: normal
+--e-global-typography-secondary-text-decoration: none
+--e-global-typography-secondary-line-height: 1.2em
+--e-global-typography-secondary-letter-spacing: -0.5px
+--e-global-typography-secondary-word-spacing: 0px
+--e-global-typography-text-font-family: "Raleway"
+--e-global-typography-text-font-size: 18px
+--e-global-typography-text-font-weight: 300
+--e-global-typography-text-text-transform: none
+--e-global-typography-text-font-style: normal
+--e-global-typography-text-text-decoration: none
+--e-global-typography-text-line-height: 1.5em
+--e-global-typography-text-letter-spacing: 0px
+--e-global-typography-text-word-spacing: 0px
+--e-global-typography-accent-font-family: "Aboreto"
+--e-global-typography-accent-font-size: 18px
+--e-global-typography-accent-font-weight: 400
+--e-global-typography-accent-text-transform: capitalize
+--e-global-typography-accent-font-style: normal
+--e-global-typography-accent-text-decoration: none
+--e-global-typography-accent-line-height: 1em
+--e-global-typography-accent-letter-spacing: 0px
+--e-global-typography-accent-word-spacing: 0px
+--e-global-typography-34f8ef0-font-family: "Aboreto"
+--e-global-typography-34f8ef0-font-size: 10vw
+--e-global-typography-34f8ef0-font-weight: 600
+--e-global-typography-34f8ef0-text-transform: lowercase
+--e-global-typography-34f8ef0-font-style: normal
+--e-global-typography-34f8ef0-text-decoration: none
+--e-global-typography-34f8ef0-line-height: 1em
+--e-global-typography-34f8ef0-letter-spacing: -8px
+--e-global-typography-34f8ef0-word-spacing: 0px
+--e-global-typography-85fbefb-font-family: "Aboreto"
+--e-global-typography-85fbefb-font-size: 46px
+--e-global-typography-85fbefb-font-weight: 400
+--e-global-typography-85fbefb-text-transform: none
+--e-global-typography-85fbefb-font-style: normal
+--e-global-typography-85fbefb-text-decoration: none
+--e-global-typography-85fbefb-line-height: 1.2em
+--e-global-typography-85fbefb-letter-spacing: -0.5px
+--e-global-typography-85fbefb-word-spacing: 0px
+--e-global-typography-abebd36-font-family: "Aboreto"
+--e-global-typography-abebd36-font-size: 14px
+--e-global-typography-abebd36-font-weight: 400
+
+TOP COLORS:
+#FFFFFF  x76
+#000000  x32
+#C49D29  x32
+#C9A84C  x17
+#141827  x10
+#666666  x9
+#333333  x9
+#555555  x8
+#EEEEEE  x7
+#69727D  x7
+#5D5D5D  x6
+#D5D5D5  x6
+#334AFF  x6
+#3F444B  x6
+#CCCCCC  x5
+#03A9F5  x5
+#D9534F  x5
+#33373D  x5
+#F9F9F9  x4
+#334AFFCC  x4
+#14182712  x4
+#CC3366  x4
+#1F2124  x4
+#1A1A1A  x4
+#888888  x3
+#999999  x3
+#FD6E4F  x3
+#DC3232  x3
+#5CB85C  x3
+#DDDDDD  x2
+#F1F1F1  x2
+#2096CD  x2
+#32373C  x2
+#1418279E  x2
+#757575  x2
+#BABABA  x2
+#DA394D  x2
+#334AFFE6  x2
+#334AFF12  x2
+#141827CC  x2
+#141827E6  x2
+#E4E4E4  x2
+#7D7D7D  x2
+#F7F6F6  x2
+#F0EEEE  x2
+#DA394D14  x2
+#334AFF3D  x2
+#334AFF57  x2
+#1418273D  x2
+#14182757  x2
+#334AFF1A  x2
+#334AFF33  x2
+#334AFF0A  x2
+#334AFF24  x2
+#55595C  x2
+#5BC0DE  x2
+#F0AD4E  x2
+#282828  x2
+#E8E1D8  x2
+#88909B  x2
+#FFFFFF00  x2
+#3498DB  x1
+#0593D4  x1
+#006699  x1
+#F6F6F6  x1
+#E9EFF9  x1
+#DDDFE3  x1
+#00A0D2  x1
+#46B450  x1
+#F56E28  x1
+#FFB900  x1
+#23282D  x1
+#FBFBFC  x1
+#1A202C  x1
+#333366  x1
+#494C4F  x1
+#CAB8A2  x1
+#F4F0EE  x1
+#AF4B2F00  x1
+#FFBC7D  x1
+
+TOP FONT-FAMILY DECLARATIONS:
+'Raleway'  x90
+var(--tec-font-family-sans-serif)  x16
+var( --e-global-typography-accent-font-family ), Sans-serif  x15
+"Aboreto", Sans-serif  x10
+"Raleway", Sans-serif  x8
+var( --e-global-typography-text-font-family ), Sans-serif  x7
+inherit  x6
+"Aboreto"  x6
+"FontAwesome"  x4
+var( --e-global-typography-primary-font-family ), Sans-serif  x4
+eicons  x3
+"Font Awesome 7 Free"  x2
+"Font Awesome 5 Free"  x2
+monospace,monospace  x2
+'Aboreto'  x2
+var(--_fa-family)  x1
+"Font Awesome 7 Brands"  x1
+"Font Awesome 5 Brands"  x1
+-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji  x1
+"Raleway"  x1
+var( --e-global-typography-abebd36-font-family ), Sans-serif  x1
+var( --e-global-typography-secondary-font-family ), Sans-serif  x1
+var( --e-global-typography-34f8ef0-font-family ), Sans-serif  x1
+
+LOGO URL: https://taragaleano.com/wp-content/uploads/2024/11/Tara-Galeano-Gold-Logo-3.png

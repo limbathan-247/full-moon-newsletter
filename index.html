@@ -4,128 +4,158 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Full Moon Newsletter</title>
+<meta name="description" content="Full Moon Newsletter by Tara Galeano">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-  *{box-sizing:border-box}
-  html,body{margin:0;padding:0;background:#eee6df;color:#493b3d}
-  body{font-family:Arial,Helvetica,sans-serif;-webkit-font-smoothing:antialiased}
-  .shell{padding:38px 16px 56px}
-  .email{width:640px;max-width:100%;margin:0 auto;background:#fffaf5;box-shadow:0 18px 52px rgba(63,36,42,.10)}
-  .header{padding:34px 36px 29px;text-align:center;background:#fffaf5}
-  .name{font-family:Georgia,'Times New Roman',serif;font-size:24px;letter-spacing:5px;color:#9b6e50;text-transform:uppercase}
-  .header-line{width:78px;height:1px;background:#c5a986;margin:15px auto 0}
-
-  .hero{background:#6a3f50;padding:38px 28px 34px;text-align:center}
-  .moon{width:122px;height:122px;border-radius:50%;margin:0 auto 22px;background:radial-gradient(circle at 38% 34%,#fff8e7 0%,#f4e6c6 56%,#d8bd8f 100%);box-shadow:0 0 0 14px rgba(242,224,190,.06),0 0 38px rgba(244,225,190,.18)}
-  .eyebrow{font-size:10px;letter-spacing:3.3px;text-transform:uppercase;color:#e0c7a5;font-weight:bold;margin-bottom:10px}
-  .hero-title{font-family:Georgia,'Times New Roman',serif;color:#fffaf1;font-size:34px;line-height:1.18;font-weight:normal;margin:0}
-
-  .body{padding:48px 58px 16px}
-  .body p{font-family:Georgia,'Times New Roman',serif;font-size:17px;line-height:1.72;margin:0 0 23px;color:#4d4041}
-  .greeting{font-family:Arial,Helvetica,sans-serif!important;font-size:14px!important;color:#735e62!important;margin-bottom:28px!important}
-
-  .quote{background:#f1e6df;margin:34px -58px;padding:34px 58px;text-align:center}
-  .quote p{font-size:22px;line-height:1.48;color:#6a3f50;font-style:italic;margin:0}
-
-  .callout{border:1px solid #d8c2aa;background:#fbf4ee;padding:25px 25px 22px;margin:31px 0}
-  .callout-label{font-family:Arial,Helvetica,sans-serif;font-size:9px;letter-spacing:2.7px;text-transform:uppercase;color:#9d754f;font-weight:bold;margin-bottom:12px}
-  .callout p{font-size:17px;margin:0}
-
-  .reclaim{text-align:center!important;font-size:21px!important;line-height:1.5!important;color:#6a3f50!important;font-style:italic;margin:31px 0!important}
-
-  .book{margin:38px -58px 0;background:#6a3f50;padding:39px 48px 41px;text-align:center}
-  .book-label{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:#e2c8a7;font-weight:bold;margin-bottom:12px}
-  .book p{color:#fff9f1;font-size:17px;line-height:1.65;margin:0 auto 24px;max-width:480px}
-  .book em{font-size:21px;color:#fff3df}
-  .button{display:inline-block;background:#c9a76e;color:#3f2c34;text-decoration:none;padding:14px 25px 13px;text-transform:uppercase;letter-spacing:1.8px;font-size:10px;font-weight:bold;border-radius:2px}
-
-  .signoff{padding:34px 58px 42px;background:#fffaf5}
-  .signoff p{font-family:Georgia,'Times New Roman',serif;font-size:17px;line-height:1.55;margin:0;color:#57484a}
-  .signature{font-size:28px!important;color:#7b4c5c!important;font-style:italic;margin-top:7px!important}
-
-  .footer{padding:27px 36px 30px;background:#efe5de;text-align:center}
-  .site{font-size:9px;letter-spacing:2.2px;text-transform:uppercase;color:#7b676a;font-weight:bold}
-  .footer-line{width:92px;height:1px;background:#cdb9aa;margin:15px auto}
-  .footer-note{font-family:Georgia,'Times New Roman',serif;font-size:11px;color:#8c787a;font-style:italic}
-
-  @media(max-width:680px){
-    .shell{padding:0;background:#fffaf5}
-    .email{width:100%;box-shadow:none}
-    .header{padding:28px 24px 24px}
-    .name{font-size:20px;letter-spacing:4px}
-    .hero{padding:34px 22px 31px}
-    .moon{width:104px;height:104px;margin-bottom:20px}
-    .hero-title{font-size:29px}
-    .body{padding:39px 25px 12px}
-    .body p{font-size:16px;line-height:1.68;margin-bottom:21px}
-    .greeting{font-size:13px!important;margin-bottom:25px!important}
-    .quote{margin:31px -25px;padding:31px 25px}
-    .quote p{font-size:20px}
-    .callout{padding:22px 20px 20px;margin:28px 0}
-    .callout p{font-size:16px}
-    .reclaim{font-size:19px!important}
-    .book{margin:34px -25px 0;padding:35px 25px 37px}
-    .book p{font-size:16px}
-    .book em{font-size:20px}
-    .signoff{padding:32px 25px 38px}
-    .signoff p{font-size:16px}
-    .footer{padding:25px 24px 28px}
-  }
+:root{
+  --charcoal:#282828;
+  --secondary:#CAB8A2;
+  --gold:#C49D29;
+  --warm:#E8E1D8;
+  --cream:#F4F0EE;
+  --white:#FFFFFF;
+  --muted:#6B665F;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--cream);color:var(--charcoal)}
+body{font-family:'Raleway',Arial,sans-serif;font-weight:300;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.stage{padding:34px 14px 54px}
+.email{width:640px;max-width:100%;margin:0 auto;background:var(--white);box-shadow:0 18px 50px rgba(40,40,40,.08);overflow:hidden}
+.subject{display:flex;gap:15px;align-items:baseline;padding:24px 28px 18px;border-bottom:1px solid rgba(202,184,162,.35);font-size:13px}
+.subject strong{font-size:10px;letter-spacing:.12em;color:var(--muted)}
+.hero{text-align:center;padding:30px 54px 42px;background:var(--white)}
+.hero-logo{width:175px;max-width:47%;display:block;margin:0 auto 18px}
+.hero-moon{width:152px;height:152px;display:block;margin:0 auto 18px}
+.hero h1{font-family:'Aboreto',serif;font-weight:400;font-size:30px;line-height:1.24;margin:0;color:var(--charcoal);letter-spacing:-.015em}
+.content{padding:0 52px}
+p{margin:0 0 21px;font-size:16px;line-height:1.65}
+.greeting{font-weight:400;margin-bottom:22px}
+.stock{width:100%;display:block;border-radius:14px;margin:12px 0 28px}
+.quote{background:var(--warm);padding:32px 40px;border-radius:14px;margin:0 0 28px;text-align:center}
+.quote p{font-family:'Aboreto',serif;font-size:18px;line-height:1.55;margin:0}
+.moon-knowledge{background:var(--cream);padding:28px 38px;border-radius:14px;margin:0 24px 30px;text-align:center}
+.moon-knowledge p{font-family:'Aboreto',serif;font-size:18px;line-height:1.55;margin:0;color:var(--gold)}
+.reflection{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:center;margin:8px 0 34px}
+.reflection img{width:100%;height:305px;object-fit:cover;border-radius:14px}
+.kicker{font-size:11px;letter-spacing:.14em;font-weight:600;color:var(--gold);margin:0 0 18px;text-transform:uppercase}
+.reflection h2{font-family:'Aboreto',serif;font-size:21px;line-height:1.5;font-weight:400;margin:0 0 17px}
+.reflection p{font-size:14px;line-height:1.6;margin:0}
+.cta{margin:0 52px 36px;background:var(--charcoal);color:var(--cream);border-radius:14px;padding:40px 45px 38px;text-align:center}
+.cta h2{font-family:'Aboreto',serif;font-weight:400;font-size:26px;line-height:1.3;margin:0 0 18px}
+.cta p{font-size:14px;line-height:1.7;margin:0 auto 25px;max-width:430px}
+.button{display:inline-block;background:var(--gold);color:var(--white);text-decoration:none;padding:14px 31px;border-radius:999px;font-size:12px;font-weight:600;letter-spacing:.07em;text-transform:uppercase}
+.signoff{padding:0 52px 33px}
+.signoff .with-love{font-family:'Aboreto',serif;font-size:18px;margin:0 0 10px}
+.signature{width:132px;display:block}
+.footer{margin:0 52px 44px;background:var(--cream);border-radius:14px;padding:28px 22px 24px;text-align:center}
+.website{font-size:11px;font-weight:600;letter-spacing:.08em;text-decoration:none}
+.socials{display:flex;justify-content:center;gap:16px;margin:22px 0 16px;flex-wrap:wrap}
+.socials a{width:34px;height:34px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;color:var(--gold);background:var(--white);text-decoration:none;box-shadow:0 3px 12px rgba(40,40,40,.05)}
+.socials svg{width:16px;height:16px;fill:currentColor}
+.footer-note{font-size:10px;color:var(--muted);letter-spacing:.04em;margin:0}
+@media (max-width:640px){
+  .stage{padding:0;background:var(--white)}
+  .email{width:100%;box-shadow:none}
+  .subject{padding:18px 20px 14px;font-size:12px;gap:12px}
+  .hero{padding:27px 24px 34px}
+  .hero-logo{width:146px;max-width:56%;margin-bottom:14px}
+  .hero-moon{width:132px;height:132px;margin-bottom:15px}
+  .hero h1{font-size:25px;line-height:1.3}
+  .content{padding:0 24px}
+  p{font-size:15px;line-height:1.68;margin-bottom:19px}
+  .stock{border-radius:12px;margin:9px 0 24px}
+  .quote{padding:27px 25px;border-radius:12px;margin-bottom:24px}
+  .quote p{font-size:16px;line-height:1.6}
+  .moon-knowledge{margin:0 0 26px;padding:26px 24px;border-radius:12px}
+  .moon-knowledge p{font-size:16px}
+  .reflection{grid-template-columns:1fr;gap:21px;margin-bottom:28px}
+  .reflection img{height:290px}
+  .reflection h2{font-size:20px}
+  .reflection p{font-size:14px}
+  .cta{margin:0 24px 31px;padding:34px 26px 33px;border-radius:12px}
+  .cta h2{font-size:22px}
+  .cta p{font-size:14px}
+  .signoff{padding:0 24px 30px}
+  .footer{margin:0 24px 32px;padding:26px 18px 22px}
+}
 </style>
 </head>
 <body>
-<div class="shell">
-  <main class="email">
-    <header class="header">
-      <div class="name">TARA GALEANO</div>
-      <div class="header-line"></div>
-    </header>
+<div class="stage">
+<main class="email">
+  <div class="subject"><strong>SUBJECT</strong><span>The moon is full. So is your knowing.</span></div>
 
-    <section class="hero">
-      <div class="moon"></div>
-      <div class="eyebrow">A Full Moon Note</div>
-      <h1 class="hero-title">The moon is full tonight.</h1>
-    </section>
+  <header class="hero">
+    <img class="hero-logo" src="tara-logo.png" alt="Tara Galeano">
+    <svg class="hero-moon" viewBox="0 0 160 160" role="img" aria-label="Full moon" xmlns="http://www.w3.org/2000/svg">
+      <defs><radialGradient id="moonFill" cx="38%" cy="34%" r="68%"><stop offset="0" stop-color="#fff7d9"/><stop offset=".62" stop-color="#d5c17b"/><stop offset="1" stop-color="#b69b53"/></radialGradient><filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+      <circle cx="80" cy="80" r="59" fill="#d5c17b" opacity=".20" filter="url(#softGlow)"/>
+      <circle cx="80" cy="80" r="54" fill="url(#moonFill)"/>
+      <g fill="#a88946" opacity=".30"><circle cx="54" cy="54" r="10"/><circle cx="104" cy="46" r="7"/><circle cx="96" cy="91" r="13"/><circle cx="52" cy="101" r="6"/><circle cx="74" cy="72" r="5"/><circle cx="117" cy="73" r="4"/><circle cx="67" cy="119" r="8"/></g>
+      <g fill="#f6e7b2" opacity=".34"><circle cx="62" cy="46" r="6"/><circle cx="89" cy="56" r="9"/><circle cx="112" cy="106" r="6"/><circle cx="43" cy="79" r="4"/></g>
+    </svg>
+    <h1>The moon is full tonight.</h1>
+  </header>
 
-    <section class="body">
-      <p class="greeting">Hi [First Name],</p>
+  <section class="content">
+    <p class="greeting">Hi [First Name],</p>
+    <p>This week handed us a rare convergence. Monday was the day of atonement- a day of return, of releasing what you've carried too long. Tuesday was the equinox- the hinge of the year, where light and dark hold equal measure before the season turns.</p>
 
-      <p>This week handed us a rare convergence. Monday was the day of atonement- a day of return, of releasing what you've carried too long. Tuesday was the equinox- the hinge of the year, where light and dark hold equal measure before the season turns.</p>
+    <img class="stock" src="https://images.pexels.com/photos/8354517/pexels-photo-8354517.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Warm natural light and shadow">
 
-      <div class="quote">
-        <p>A day of forgiveness, followed by a day of balance. That's not coincidence. I believe that's an invitation.</p>
+    <div class="quote"><p>A day of forgiveness, followed by a day of balance. That's not coincidence. I believe that's an invitation.</p></div>
+
+    <p>If you're in a sexless marriage, you know what it is to carry something quietly, to keep the ledger balanced on the outside while something inside you goes unspoken, unmet, unheld. Shame loves that silence because it feeds on it.</p>
+
+    <img class="stock" src="https://images.pexels.com/photos/7752683/pexels-photo-7752683.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Woman reconnecting with her body">
+
+    <div class="moon-knowledge"><p>But here's what the moon knows: nothing stays hidden forever. Not the full light. Nor your desire.</p></div>
+
+    <p>So tonight, I'll ask you one thing. Not to fix your marriage or perform. Just this: put your hand on your body and tell it the truth, whatever that truth is for you.</p>
+
+    <div class="reflection">
+      <img src="https://images.pexels.com/photos/8279473/pexels-photo-8279473.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Quiet journaling and reflection">
+      <div>
+        <div class="kicker">An honest moment</div>
+        <h2>That's where reclamation begins... with an honest moment.</h2>
+        <p>I believe you're a woman with a body that still knows how to want, it just takes time.</p>
       </div>
+    </div>
+  </section>
 
-      <p>If you're in a sexless marriage, you know what it is to carry something quietly, to keep the ledger balanced on the outside while something inside you goes unspoken, unmet, unheld. Shame loves that silence because it feeds on it.</p>
+  <section class="cta">
+    <h2>Rediscovering My Body</h2>
+    <p>If you're ready to go deeper, <em>Rediscovering My Body</em> is where I'd start. It's $20, and it's yours to read at your own pace.</p>
+    <a class="button" href="https://a.co/d/04ATgZFo" target="_blank" rel="noopener">Get the Book →</a>
+  </section>
 
-      <p><strong>But here's what the moon knows:</strong> nothing stays hidden forever. Not the full light. Nor your desire.</p>
+  <section class="signoff">
+    <p class="with-love">With love,</p>
+    <img class="signature" src="tara-signature.png" alt="Tara signature">
+  </section>
 
-      <div class="callout">
-        <div class="callout-label">Tonight</div>
-        <p>So tonight, I'll ask you one thing. Not to fix your marriage or perform. Just this: put your hand on your body and tell it the truth, whatever that truth is for you.</p>
-      </div>
-
-      <p class="reclaim">That's where reclamation begins… with an honest moment.</p>
-
-      <p>I believe you're a woman with a body that still knows how to want, it just takes time.</p>
-
-      <div class="book">
-        <div class="book-label">Go deeper</div>
-        <p>If you're ready to go deeper, <em>Rediscovering My Body</em> is where I'd start. It's $20, and it's yours to read at your own pace.</p>
-        <a class="button" href="https://www.goodreads.com/book/show/56628600-rediscovering-my-body" target="_blank" rel="noopener">Get the book →</a>
-      </div>
-    </section>
-
-    <section class="signoff">
-      <p>In the light of the moon,</p>
-      <p class="signature">Tara</p>
-    </section>
-
-    <footer class="footer">
-      <div class="site">taragaleano.com</div>
-      <div class="footer-line"></div>
-      <div class="footer-note">reconnection • body wisdom • intimacy</div>
-    </footer>
-  </main>
+  <footer class="footer">
+    <a class="website" href="https://taragaleano.com/" target="_blank" rel="noopener">TARAGALEANO.COM</a>
+    <div class="socials">
+      <a href="https://www.instagram.com/tara.galeano/" aria-label="Instagram" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm11.5 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/></svg>
+      </a>
+      <a href="https://www.facebook.com/TaraGaleano" aria-label="Facebook" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 22v-8h2.8l.4-3.2h-3.2V8.7c0-.9.3-1.6 1.7-1.6h1.8V4.2c-.3 0-1.4-.2-2.6-.2-2.6 0-4.4 1.6-4.4 4.5v2.3H7v3.2h3v8h3.5Z"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/taragaleano/" aria-label="LinkedIn" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.3 7.8A2.3 2.3 0 1 1 5.3 3a2.3 2.3 0 0 1 0 4.8ZM3.3 9h4v12h-4V9Zm6.3 0h3.8v1.6h.1c.5-1 1.8-2.1 3.8-2.1 4 0 4.7 2.6 4.7 6V21h-4v-5.8c0-1.4 0-3.2-2-3.2s-2.3 1.5-2.3 3.1V21h-4V9Z"/></svg>
+      </a>
+      <a href="https://youtube.com/user/BoulderSexTherapy" aria-label="YouTube" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12c0 1.6.1 3.2.5 4.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1c.4-1.6.5-3.2.5-4.8 0-1.6-.1-3.2-.5-4.8ZM9.7 15.4V8.6l6 3.4-6 3.4Z"/></svg>
+      </a>
+    </div>
+    <p class="footer-note">Intimacy &nbsp;•&nbsp; Connection &nbsp;•&nbsp; Sexual Wellness</p>
+  </footer>
+</main>
 </div>
 </body>
 </html>
